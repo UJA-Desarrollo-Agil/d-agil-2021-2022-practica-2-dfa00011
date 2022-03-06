@@ -31,21 +31,12 @@ undum.game.situations = {
     start: new undum.SimpleSituation(
        "<h1>LA DECISIÓN</h1>\
         <img src='media/games/tutorial/futbol1.png' class='float_right'>\
-        <p>Eres jugador del Real Madrid que durante el entrenamiento previo a la final de la Champions League\
+        <p>Eres jugador del fútbol que durante el entrenamiento previo a la final de la Champions League\
 		sientes un pinchazo en el abductor, en ese momento decides <a href='entrenar'>seguir entrenando</a>\
 		o <a href='hablar'>hablar con el mister</a></p>\
          \
         <p class='transient'></p>"
     ),
-
-    // NB: The 'hub' situation which is the main list of topics, is
-    // defined wholly in the HTML file, and doesn't have an entry in
-    // the game.situations dictionary in this file.
-
-    // For variety, here we define a situation using the top-level
-    // Situation type. This is a neat approach to generate text by
-    // looking it up in the HTML document. For static text that makes
-    // more sense than writing it longhand.
    
 	
 	 entrenar: new undum.SimpleSituation(
@@ -58,7 +49,8 @@ undum.game.situations = {
 
 	 hablar: new undum.SimpleSituation(
 	  "<h1>Hablar con el entrenador</h1>\
-        <p>Consideras que si no estás al 100% parajugar, es perjudicial para el equipo, por ese motivo te\
+	  <img src='media/games/tutorial/charla.jpeg' class='float_right'>\
+        <p>Consideras que si no estás al 100% para jugar, es perjudicial para el equipo, por ese motivo te\
 		acercas al entrenador y le cuentas que has sentido un pinchazo en el abductor y no te encuentras\
 		disponible para ayudar al equipo con tu máximo nivel.\
 	    El entrenador no quiere correr riesgos en un partido tan importante y decide que no vas a jugar.\
@@ -91,8 +83,8 @@ undum.game.situations = {
    
    	 pedir: new undum.SimpleSituation(
 	  "<h1>PEDIR QUE NO DIGA NADA</h1>\
-		<p>Llegó la hora de dormir y nadie se ha enterado excepto el fisio que estás con molestias el dia anterior al partido.\
-		 Pero sientes que no es lo mejor para el equipo por eso se lo dices a tu compañero de habitación.\
+		<p>Llegó la hora de dormir y nadie se ha enterado excepto el fisio, que estás con molestias el dia anterior al partido.\
+		 Pero sientes que no es lo mejor para el equipo, por eso se lo dices a tu compañero de habitación.\
 		Él te comprende, a pesar de que pueda suponer quedarse  él en el banquillo. Por eso le dices que esté\
 		preparado en todo momento por si tú no decides continuar.</p>\
 		<br/>\
@@ -103,6 +95,7 @@ undum.game.situations = {
 	
 	  musica: new undum.SimpleSituation(
 	  "<h1>MÚSICA</h1>\
+	  <img src='media/games/tutorial/musica.jpg' class='float_right'>\
 		<p>Decides ponerte música para entrar en el estadio con la mayor motivación posible y olvidarte del pinchazo\
 		que te dió en el último entrenamiento.</p>\
 		<br/>\
@@ -133,6 +126,7 @@ undum.game.situations = {
 	
 	acercar: new undum.SimpleSituation(
 	  "<h1>ACERCARSE AL PEQUEÑO</h1>\
+	  <img src='media/games/tutorial/acercar.jpg' class='float_right'>\
 		<p>Al observar que es un niño pequeño, decides acercarte aunque puedas perder un poco la concentración.\
 		Mientras hablas con él y te haces algunas fotografías, el niño en cuestión te pide que si marcas le dediques\
 		el gol realizando el gesto que el niño dice\
@@ -142,13 +136,15 @@ undum.game.situations = {
 	
 	seguir: new undum.SimpleSituation(
 	  "<h1>NO PERDER LA CONCENTRACIÓN</h1>\
+	  <img src='media/games/tutorial/pasar.jpeg' class='float_right'>\
 		<p>No quieres perder la concentración del partido, por ello, y aunque algunos compañeros tuyos \
-		se paren con los aficionados, tú has decidido <a href='entrar'> entrar al estadio</a> con la máxima concentracIón</p>\ ",
+		se paren con los aficionados, tú has decidido <a href='entrar'> entrar al estadio</a> con la máxima concentración</p>\ ",
 		
     ),
 	
 	entrar: new undum.SimpleSituation(
 	  "<h1>ENTRADA AL ESTADIO</h1>\
+	  <img src='media/games/tutorial/calentar.jpg' class='float_right'>\
 		<p>Te encuentras ya en el estadio realizando el calentamiento.\
 		A pesar del medio dia de descanso y de la sesiones de fisio sigues con la molesta en el abductor, las cuales\
 		no te van a dejar rendir al 100%, pero sigues pensando que en un partido tan grande no puedes permitir perderlo\
@@ -162,6 +158,7 @@ undum.game.situations = {
 		
 	confiar: new undum.SimpleSituation(
 	  "<h1>ÚLTIMA SESIÓN FISIO</h1>\
+	  <img src='media/games/tutorial/fisio2.jpg' class='float_right'>\
 		<p>Termina el calentamiento y te diriges al fisio a que te de un último masaje para poder aliviar un poco el dolor\
 		y que te realice un vendaje de compresión lo más eficaz posible.\
 		Una vez acabado el masaje express, te proprone que si marcas te acerques a él y se lo dediques. Tú aceptas la propuesta.</p>\
@@ -174,6 +171,7 @@ undum.game.situations = {
 	
 	decir: new undum.SimpleSituation(
 	  "<h1>DECISIÓN DEL ENTRENADOR</h1>\
+	  <img src='media/games/tutorial/charla2.jpg' class='float_right'>\
 		<p>El entrenador te comunica su decisión consesuada por el cuerpo técnico y los fisios, la cuál es dejarte sin jugar\
 		para no aumentar el riesgo de tener una lesión de gravedad.\
 		Tú entiendes su decisión y aunque estes triste pero te encuentras un poco animado por proder ganar un torneo.</p>\
@@ -188,6 +186,7 @@ undum.game.situations = {
 	
 	partido: new undum.SimpleSituation(
 	  "<h1>ENTRADA AL ESTADIO</h1>\
+	  <img src='media/games/tutorial/gol.jpg' class='float_right'>\
 		<p>Ronda el minuto 66, cuando te cae un balón en el área y sin pensartelo dos veces le pegas para poner el 1-0 en el marcador.\
 		En ese momento tienes las opciones de: <a href='fisio'>	te diriges al banquillo y te abrazas con el fisio </a> o \
 		<a href='fisioo'> te vas al corner y haces la celebración del niño </a></p>\ " ,
@@ -196,10 +195,23 @@ undum.game.situations = {
 
 	fisioo: new undum.SimpleSituation(
 	  "<h1>GOL</h1>\
+	  <img src='media/games/tutorial/celebrar2.jpeg' class='float_right'>\
 		<p>Con la emoción del gol se te olvida dedicarselo al fisio pero se te viene a la cabeza el momento en el que el pequeño\
 	     te dijo como celebralo y sin pensartelo dos veces te vas en bucar de una cámara y se lo dedicas con su gesto.</p>\
 		<br/>\
 		<p>Con ese gol termina el prtido y sois CAMPEONES de la Champions 30 años después.\
+		Durante la celebración le pides perdón al fisio y le das las gracias por lo que hizo por tí y le prometes que al siguiente\
+		año el gol va para él..</p>\
+		<h1>FIN</h1>\ " ,
+    ),
+	
+	fisio: new undum.SimpleSituation(
+	  "<h1>GOL</h1>\
+	  <img src='media/games/tutorial/celebrar.jpg' class='float_right'>\
+		<p>Con el subidón del gol vas en busca de la persona que confió en tí  para dedicarselo y abrazarte con él\
+	     a pesar de no dedicárselo al niño, pero piensas buscarlo al final del partido para darle tu camiseta por no dedicarle el gol.</p>\
+		<br/>\
+		<p>Con ese gol termina el partido y sois CAMPEONES de la Champions 30 años después.\
 		Durante la celebración le pides perdón al fisio y le das las gracias por lo que hizo por tí y le prometes que al siguiente\
 		año el gol va para él..</p>\
 		<h1>FIN</h1>\ " ,
