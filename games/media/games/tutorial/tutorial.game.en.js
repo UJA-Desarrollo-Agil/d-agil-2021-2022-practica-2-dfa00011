@@ -59,7 +59,18 @@ undum.game.situations = {
 		tú ya eras un campeón de la Champions League y sabes que una vez llegar a casa, vas a celebrarlo por\
 		todo lo alto con tu familia.</p>\
 		<h1>FIN</h1>\ ",
+		{
+          
+            enter: function(character, system, from) {
+                system.setQuality("champions", 1);
+                system.setCharacterText(
+                    "<p>La tienes, eres campeón de europa</p>"
+                );
+            }
+	}
 
+
+		
     ),
 	
 	 irfisio: new undum.SimpleSituation(
@@ -180,6 +191,16 @@ undum.game.situations = {
 		tú ya eras un campeón de la Champions League y sabes que una vez llegar a casa, vas a celebrarlo por\
 		todo lo alto con tu familia.</p>\
 		<h1>FIN</h1>\ " ,
+		{
+          
+            enter: function(character, system, from) {
+                system.setQuality("champions", 1);
+                system.setCharacterText(
+                   "<p>La tienes, eres campeón de europa</p>"
+                );
+            }
+	}
+ 
     ),
 	
 	
@@ -203,6 +224,17 @@ undum.game.situations = {
 		Durante la celebración le pides perdón al fisio y le das las gracias por lo que hizo por tí y le prometes que al siguiente\
 		año el gol va para él..</p>\
 		<h1>FIN</h1>\ " ,
+		{
+          
+            enter: function(character, system, from) {
+                system.setQuality("champions", 1);
+                system.setCharacterText(
+                  "<p>La tienes, eres campeón de europa</p>"
+                );
+            }
+	}
+
+
     ),
 	
 	fisio: new undum.SimpleSituation(
@@ -215,7 +247,18 @@ undum.game.situations = {
 		Durante la celebración le pides perdón al fisio y le das las gracias por lo que hizo por tí y le prometes que al siguiente\
 		año el gol va para él..</p>\
 		<h1>FIN</h1>\ " ,
-    ),
+   
+	
+	{
+          
+            enter: function(character, system, from) {
+                system.setQuality("champions", 1);
+                system.setCharacterText(
+                    "<p>La tienes, eres campeón de europa</p>"
+                );
+            }
+	}
+ ),
 
 };
 
@@ -227,7 +270,11 @@ undum.game.start = "start";
 /* Here we define all the qualities that our characters could
  * possess. We don't have to be exhaustive, but if we miss one out then
  * that quality will never show up in the character bar in the UI. */
-
+undum.game.qualities = {
+    champions: new undum.IntegerQuality(
+        "Champions", {priority:"0001", group:'stats'}
+    )
+};
 // ---------------------------------------------------------------------------
 /* The qualities are displayed in groups in the character bar. This
  * determines the groups, their heading (which can be null for no
@@ -243,3 +290,7 @@ undum.game.qualityGroups = {
 /* This function gets run before the game begins. It is normally used
  * to configure the character at the start of play. */
 
+undum.game.init = function(character, system) {
+    character.qualities.champions=0;
+    system.setCharacterText("<p>Estás comenzando el camino para ganar el título.</p>");
+};
